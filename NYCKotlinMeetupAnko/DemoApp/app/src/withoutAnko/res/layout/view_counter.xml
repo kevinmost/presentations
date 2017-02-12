@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/counterTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:text="0"
+        />
+
+    <Button
+        android:id="@+id/incrementButtonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/increment"
+        />
+
+</merge>

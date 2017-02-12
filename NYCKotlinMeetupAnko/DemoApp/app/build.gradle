@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+
+configurations {
+    withoutAnko // only add to withoutAnko flavor
+    withAnko // only add to withAnko flavor
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.kevinmost.ankodemo"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    productFlavors {
+        withoutAnko {
+        }
+        withAnko {
+            applicationIdSuffix ".anko"
+        }
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+
+    withAnkoCompile "org.jetbrains.anko:anko-sdk19:$versions.anko"
+
+    // There is an Anko dependency for many 'com.android.support' artifacts, and it's always
+    // "org.jetbrains.anko:anko-${supportArtifactName}:${ankoVersion}"
+    compile "com.android.support:recyclerview-v7:$versions.appCompat"
+    withAnkoCompile "org.jetbrains.anko:anko-recyclerview-v7:$versions.anko"
+}
