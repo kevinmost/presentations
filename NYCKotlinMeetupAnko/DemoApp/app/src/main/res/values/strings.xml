@@ -4,12 +4,4 @@
 
     <string name="increment">Increment</string>
     <string name="increment_log_details">Counter value is now %d</string>
-
-    <!-- One of these is randomly displayed as a hint when you make a to-do entry -->
-    <string-array name="todo_hint_array">
-        <item>Buy milk</item>
-        <item>Pay phone bill</item>
-        <item>Check out Anko</item>
-        <item>Pack for vacation</item>
-    </string-array>
 </resources>
